@@ -1,0 +1,23 @@
+{
+    "name": "google-feed-demo",
+    "homepage": "https://github.com/spirylics/google-feed-demo",
+    "authors": [
+    "spirylics <cyril.souti@gmail.com>"
+  ],
+    "description": "",
+    "main": "",
+    "moduleType": [],
+    "license": "MIT",
+    "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+    "dependencies": {
+        "google-feeds": "GoogleWebComponents/google-feeds#~1.0.2",
+        "iron-list": "PolymerElements/iron-list#~1.1.7",
+        "juicy-html": "Juicy/juicy-html#master"
+    }
+}

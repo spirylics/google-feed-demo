@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <title>google-feeds Demo</title>
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="bower_components/google-feeds/google-feeds.html">
+    <link rel="import" href="bower_components/iron-list/iron-list.html">
+    <link rel="import" href="bower_components/juicy-html/juicy-html.html">
+
+</head>
+
+<body unresolved>
+    <style is="custom-style">
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            @apply(--layout-fullbleed);
+        }
+        
+        iron-list {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+
+    <template is='dom-bind'>
+        <google-feeds feed='http://www.commitstrip.com/fr/feed/' results='{{result}}'></google-feeds>
+        <iron-list items="[[result.entries]]" as="entry">
+            <template>
+                <div>
+                    <h2>{{entry.title}}</h2>
+                    <template is="juicy-html" content$="{{entry.content}}"></template>
+                </div>
+            </template>
+        </iron-list>
+    </template>
+
+</body>
+
+</html>
